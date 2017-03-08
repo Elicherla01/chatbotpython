@@ -40,7 +40,10 @@ def webhook():
                     message_text = messaging_event["message"]["text"]  # the message's text
 
                     if message_text == "Hi":
-                        send_message(sender_id, "Glad to see you here. I can help you with course details")
+                        send_message(sender_id, "Glad to see you here. How can i help you?")
+                    
+                    if message_text == "Hello":
+                        send_message(sender_id, "Amazing you said Hello")
                     
                     
                     send_message(sender_id, "Thanks for the message. We will get back")
