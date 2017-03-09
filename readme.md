@@ -3,7 +3,7 @@ This is a simple python template that uses Flask to build a webhook for Facebook
 
 please read instructions at https://blog.hartleybrody.com/fb-messenger-bot/.
 
-I am trying to modify this map to make more conversational
+I am trying to modify this bot to make more conversational
 
 This is in the branch i am doing in CLI
 
