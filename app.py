@@ -46,10 +46,13 @@ def webhook():
                     if message_text == "Hello":
                         send_message(sender_id, "Amazing you said Hello")
 
-                    if message_text == "Tesco":
+                    if message_text == "Bye":
                         send_message(sender_id, "Sorry to see you going. Have fun")
-                        url = "http://www.tesco.com"
+                        url = "http://www.facebook"
+                        bot_response = " Try some friends on facebook: "+ url 
+                        
 
+                    url = "http://www.tesco.com"
                     bot_response = " Maybe you can try this link: "+ url 
                     send_message(sender_id, bot_response)
                         
