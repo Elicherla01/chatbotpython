@@ -69,7 +69,7 @@ def webhook():
                         username = user_info['first_name']
                         language = user_info['locale']
                         bot_response = "Hi "+username+", nice to meet you!"
-                    send_template_message(sender_id, " ")
+                        send_template_message(sender_id, " ")
 
                 if messaging_event.get("optin"):  # optin confirmation
                     pass
