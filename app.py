@@ -8,6 +8,11 @@ from fbmq import Page
 
 app = Flask(__name__)
 
+graph_url = 'https://graph.facebook.com/v2.6'
+os.environ["VERIFY_TOKEN"] = "EAAZACqvpzalUBADgFxja71zm84pHCcWGfWqhSwuBM1ZBUIsFOvmNh7fxrXUG9nWxNZAW24tLvFD2HSDUgH3mVIsgRiFFZCPfMbCloMY02mXxUNp77UTiGgDpLVUhvLZBkZB4G3sWgHZB6NEi7jflhpCvLxiivxviCIchjO1lAZCbbQZDZD"
+os.environ["PAGE_ACCESS_TOKEN"] = "EAAZACqvpzalUBADgFxja71zm84pHCcWGfWqhSwuBM1ZBUIsFOvmNh7fxrXUG9nWxNZAW24tLvFD2HSDUgH3mVIsgRiFFZCPfMbCloMY02mXxUNp77UTiGgDpLVUhvLZBkZB4G3sWgHZB6NEi7jflhpCvLxiivxviCIchjO1lAZCbbQZDZD"
+
+
 
 @app.route('/', methods=['GET'])
 def verify():
