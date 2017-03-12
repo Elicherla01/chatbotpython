@@ -63,13 +63,14 @@ def webhook():
                         
 
                 if messaging_event.get("delivery"):  # delivery confirmation
-                    sender_id = messaging_event["sender"]["id"]        # the facebook ID of the person sending you the message
-                    user_info = get_user_info(sender_id)
-                    if user_info:
-                        username = user_info['first_name']
-                        language = user_info['locale']
-                        bot_response = "Hi "+username+", nice to meet you!"
-                        send_template_message(sender_id, " ")
+ #                   sender_id = messaging_event["sender"]["id"]        # the facebook ID of the person sending you the message
+ #                   user_info = get_user_info(sender_id)
+ #                   if user_info:
+ #                       username = user_info['first_name']
+ #                       language = user_info['locale']
+ #                       bot_response = "Hi "+username+", nice to meet you!"
+ #                       send_template_message(sender_id, " ")
+                    pass  
 
                 if messaging_event.get("optin"):  # optin confirmation
                     pass
