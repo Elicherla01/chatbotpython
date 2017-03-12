@@ -46,19 +46,28 @@ def webhook():
                     if message_text == "Hello":
                         send_message(sender_id, "Amazing you said Hello")
 
-                    if message_text == "Bye":
+                    if message_text == "Tesco":
                         send_message(sender_id, "Sorry to see you going. Have fun")
+                        url = "http://www.tesco.com"
 
-
+                    bot_response = " Maybe you can try this link: "+ url 
+                    send_message(sender_id, bot_response)
+                        
 
                 if messaging_event.get("delivery"):  # delivery confirmation
-                    pass
+                    sender_id = messaging_event["sender"]["id"]        # the facebook ID of the person sending you the message
+                    user_info = get_user_info(sender_id)
+                    if user_info:
+                        username = user_info['first_name']
+                        language = user_info['locale']
+                        bot_response = "Hi "+username+", nice to meet you!"
+                    send_template_message(sender_id, " ")
 
                 if messaging_event.get("optin"):  # optin confirmation
                     pass
 
                 if messaging_event.get("postback"):  # user clicked/tapped "postback" button in earlier message
-                    pass
+                    received_postback(messaging_event)
 
     return "ok", 200
 
